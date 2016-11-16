@@ -1,5 +1,7 @@
-private func main(arguments: [String]) {
-    let arguments = arguments.dropFirst()
+import Commander
+
+let main = command {
+    let arguments = CommandLine.arguments.dropFirst()
     guard let input = arguments.first else {
         print("inputの引数を入力してください😡")
         return
@@ -8,4 +10,4 @@ private func main(arguments: [String]) {
     print(generator.generate())
 }
 
-main(arguments: CommandLine.arguments)
+main.run()
