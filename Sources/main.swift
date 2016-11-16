@@ -1,13 +1,10 @@
 import Commander
 
-let main = command {
-    let arguments = CommandLine.arguments.dropFirst()
-    guard let input = arguments.first else {
-        print("inputの引数を入力してください😡")
-        return
-    }
+let main = command(Argument("input"),
+                   Option("suffix", "(　´･‿･｀)", flag: "s"),
+                   Option("length", -1, flag: "l")) { (input: String, suffix: String, length: Int) in
     let generator = Generator(value: input)
-    print(generator.generate())
+                    print(generator.generate(suffix: suffix, maxLength: length < 0 ? nil : length))
 }
 
 main.run()
