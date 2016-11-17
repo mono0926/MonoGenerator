@@ -9,8 +9,8 @@
 import XCTest
 @testable import MonoGenerator
 
-class GeneraterTests: XCTestCase {
-    static var allTests : [(String, (GeneraterTests) -> () throws -> Void)] {
+class GeneratorTests: XCTestCase {
+    static var allTests : [(String, (GeneratorTests) -> () throws -> Void)] {
         return [
             ("testGenerate", testGenerate),
             ("testGenerate_suffix", testGenerate_suffix),

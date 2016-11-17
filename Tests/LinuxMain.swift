@@ -1,6 +1,6 @@
 import XCTest
-@testable import MonoGeneraterTests
+@testable import MonoGeneratorTests
 
 XCTMain([
-     testCase(GeneraterTests.allTests),
+     testCase(GeneratorTests.allTests),
 ])
