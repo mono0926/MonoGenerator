@@ -19,8 +19,8 @@ class Generator {
         guard let maxLength = maxLength else {
             return r
         }
-        // こうも書けるけどprefixの方がややベターかな
-//        return r[r.startIndex..<r.index(r.startIndex, offsetBy: maxCount)]
+        // こうも書けるけどprefixの方がベター
+//        return r[r.startIndex..<r.index(r.startIndex, offsetBy: min(maxLength, r.characters.count))]
         return String(r.characters.prefix(maxLength))
     }
 }

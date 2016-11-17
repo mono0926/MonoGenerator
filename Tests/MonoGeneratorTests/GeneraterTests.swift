@@ -27,6 +27,7 @@ class GeneraterTests: XCTestCase {
 
     func testGenerate_maxCount() {
         XCTAssertEqual(target.generate(maxLength: 6), "value(")
+        XCTAssertEqual(target.generate(maxLength: 100), "value(　´･‿･｀)")
     }
 
 }
