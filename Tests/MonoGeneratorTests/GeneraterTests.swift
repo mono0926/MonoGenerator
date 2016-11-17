@@ -10,6 +10,14 @@ import XCTest
 @testable import MonoGenerator
 
 class GeneraterTests: XCTestCase {
+    static var allTests : [(String, (GeneraterTests) -> () throws -> Void)] {
+        return [
+            ("testGenerate", testGenerate),
+            ("testGenerate_suffix", testGenerate_suffix),
+            ("testGenerate_maxCount", testGenerate_maxCount),
+        ]
+    }
+
     private var target: Generator!
 
     override func setUp() {
